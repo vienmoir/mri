@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt
+
 def remgar(image): #remove garbage
     image = image.astype(np.uint8)
     nb_components, output, stats, _ = cv2.connectedComponentsWithStats(image, connectivity = 8)
