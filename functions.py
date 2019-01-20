@@ -37,8 +37,8 @@ def tophat(image, kernel):
     return clean
 
 def close(image, num):
-    kernel = np.ones((num,num),np.uint8)
-    closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+    #kernel = np.ones((num,num),np.uint8)
+    closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel(num))
     closing = closing.astype(np.uint8)
     return closing
 
